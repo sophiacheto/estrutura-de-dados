@@ -1,4 +1,4 @@
-public class losango1 {
+public class LosangoMelhor {
     static void fig(int n) {
         int i = 1;
         while (i<=n-1) {
