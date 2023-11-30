@@ -20,8 +20,8 @@ public class Matrix {
       cols = c;
       for (int i=0; i<rows; i++)
          for (int j=0; j<cols; j++)
-            data[i][j] = rand.nextInt(min, max+1);
-         // data[i][j] = rand.nextInt(max+1) + min;   // para a versão 11 do Java
+            // data[i][j] = rand.nextInt(min, max+1);
+         data[i][j] = rand.nextInt(max+1) + min;   // para a versão 11 do Java
    }
 
    // Ler os rows x cols elementos da matriz
@@ -63,9 +63,9 @@ public class Matrix {
     public Matrix transpose() {
         Matrix transposta = new Matrix(cols, rows);
 
-        for (int i=0; i<cols; i++)
-            for (int j=0; j<rows; j++)
-               transposta.data[i][j] = data[j][i];
+        for (int i=0; i<rows; i++)
+            for (int j=0; j<cols; j++)
+               transposta.data[j][i] = data[i][j];
 
       return transposta;
     }
@@ -98,8 +98,9 @@ public class Matrix {
     }
 
     public static void main(String[] args) {
-        Matrix aleatoria = new Matrix(5, 3, 0, 10);
-        System.out.println(aleatoria);
+      Matrix m1 = new Matrix(5,4);
+      System.out.println("m1:");
+      System.out.println(m1);
     }
 
     //       Scanner stdin = new Scanner(System.in);
