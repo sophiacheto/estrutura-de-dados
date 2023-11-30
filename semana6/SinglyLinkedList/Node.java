@@ -4,7 +4,7 @@ public class Node<T> {
     private T value;
     private Node<T> next;
 
-    Node(T v, Node<T> n) {
+    public Node(T v, Node<T> n) {
         value = v;
         next = n;
      }
