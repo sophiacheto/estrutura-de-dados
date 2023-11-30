@@ -1,4 +1,4 @@
-package semana7.ED006;
+import semana6.SinglyLinkedList.Node;
 
 public class CircularLinkedList<T> {
     Node<T> last;

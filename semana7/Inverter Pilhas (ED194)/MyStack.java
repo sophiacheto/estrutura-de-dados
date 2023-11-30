@@ -1,5 +1,3 @@
-package semana7.ED194;
-
 public interface MyStack<T> {
 // M´etodos que modificam a pilha
 public void push(T v); // Coloca um valor no topo da pilha
