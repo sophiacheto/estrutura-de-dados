@@ -1,4 +1,4 @@
-package semana6.SinglyLinkedList;
+package semana6;
 
 public class Node<T> {
     private T value;

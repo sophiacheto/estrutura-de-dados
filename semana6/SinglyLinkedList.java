@@ -1,4 +1,4 @@
-package semana6.SinglyLinkedList;
+package semana6;
 
 public class SinglyLinkedList<T> {
     private Node<T> first;    // Primeiro no da lista
