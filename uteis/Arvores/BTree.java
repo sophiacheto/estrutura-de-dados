@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 import uteis.Filas.LinkedListQueue;
 import uteis.Filas.MyQueue;
-
-import uteis.Filas.LinkedListQueue;
-import uteis.Filas.MyQueue;
 import uteis.Pilhas.LinkedListStack;
 import uteis.Pilhas.MyStack;
 

@@ -1,7 +1,6 @@
 package semana10;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import uteis.Arvores.BTNode;
