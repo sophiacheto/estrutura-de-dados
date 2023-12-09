@@ -208,39 +208,38 @@ public class BTree<T> {
                current = current.getRight();
                break;
          }
-      }
-
+      }      
       return current.getValue();
    }
 
-   public int nodesLevel(int k) {
-      if (k==0) return 1;
-      int[] count = {0};
-      int nivelPai = k-1;
-      numeroDeFilhos(nivelPai, 0, count, root);
-      return count[0];
-   }
+   // public int nodesLevel(int k) {
+   //    if (k==0) return 1;
+   //    int[] count = {0};
+   //    int nivelPai = k-1;
+   //    numeroDeFilhos(nivelPai, 0, count, root);
+   //    return count[0];
+   // }
 
-   private void numeroDeFilhos(int max, int currentlevel, int[] count, BTNode<T> n) {
-      if (currentlevel==max) {
-         if (n.getLeft() != null) count[0] += 1;
-         if (n.getRight() != null) count[0] += 1;
-         return;
-      }
-      if (n.getLeft() == null && n.getRight() == null) return;
-      if (n.getLeft() == null) {;
-         numeroDeFilhos(max, currentlevel+1, count, n.getRight());
-         return;
-      }
-      if (n.getRight() == null) {
-         numeroDeFilhos(max, currentlevel+1, count, n.getLeft());
-         return;
-      }
-      numeroDeFilhos(max, currentlevel+1, count, n.getRight());
-      numeroDeFilhos(max, currentlevel+1, count, n.getLeft());
-   }
+   // private void numeroDeFilhos(int max, int currentlevel, int[] count, BTNode<T> n) {
+   //    if (currentlevel==max) {
+   //       if (n.getLeft() != null) count[0] += 1;
+   //       if (n.getRight() != null) count[0] += 1;
+   //       return;
+   //    }
+   //    if (n.getLeft() == null && n.getRight() == null) return;
+   //    if (n.getLeft() == null) {;
+   //       numeroDeFilhos(max, currentlevel+1, count, n.getRight());
+   //       return;
+   //    }
+   //    if (n.getRight() == null) {
+   //       numeroDeFilhos(max, currentlevel+1, count, n.getLeft());
+   //       return;
+   //    }
+   //    numeroDeFilhos(max, currentlevel+1, count, n.getRight());
+   //    numeroDeFilhos(max, currentlevel+1, count, n.getLeft());
+   // }
 
-   public int nodesLevelRobert(int k){
+   public int nodesLevel(int k){
       return calculateNodesLevel(root, k);
    }
 
@@ -267,6 +266,6 @@ public class BTree<T> {
       // System.out.println(tree.path("ED"));
 
       System.out.println(tree.nodesLevel(5));
-      System.out.println(tree.nodesLevelRobert(5));
+
    }
 }
