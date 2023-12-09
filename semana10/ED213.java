@@ -35,13 +35,12 @@ public class ED213 {
 
    static ArrayList<String> paths(BTree<Integer> tree) {
     ArrayList<String> resultados = new ArrayList<>();
-    int altura = tree.depth();
-    for (int i=1; i<=altura; i++)
+    for (int i=1; i<=tree.depth(); i++)
       goSets(0, i, new char[i], resultados); // gera todos os caminhos, parando na raiz até parando só no último nível
     return resultados;
    }
 
-
+// Gera um array com caminhos até o nível v
   static void goSets(int cur, int v, char used[], ArrayList<String> resultados) {
     if (cur == v) {  // Caso base: terminamos o conjunto
        resultados.add(new String(used)); // adiciona ao array a nova opção de caminho
@@ -54,7 +53,7 @@ public class ED213 {
     }
  }
 
- 
+
     public static int sumPath(String s, BTree<Integer> t) {
       char[] path = s.toCharArray();
       BTNode<Integer> current = t.getRoot();
