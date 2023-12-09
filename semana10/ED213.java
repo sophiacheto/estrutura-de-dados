@@ -22,11 +22,22 @@ public class ED213 {
       return melhor;
     }
 
+
+   //  SÓ FUNCIONA PARA CAMINHOS QUE CHEGUEM ATÉ O ÚLTIMO NÍVEL:
+   // static ArrayList<String> paths(BTree<Integer> tree) {
+   //  ArrayList<String> resultados = new ArrayList<>();
+   //  int altura = tree.depth();
+   //  char used[] = new char[altura];
+   //  goSets(0, altura, used, resultados); // chamar funcao recursiva
+   //  return resultados;
+   // }
+
+
    static ArrayList<String> paths(BTree<Integer> tree) {
     ArrayList<String> resultados = new ArrayList<>();
     int altura = tree.depth();
-    char used[] = new char[altura];
-    goSets(0, altura, used, resultados); // chamar funcao recursiva
+    for (int i=1; i<=altura; i++)
+      goSets(0, i, new char[i], resultados); // gera todos os caminhos, parando na raiz até parando só no último nível
     return resultados;
    }
 
@@ -43,6 +54,7 @@ public class ED213 {
     }
  }
 
+ 
     public static int sumPath(String s, BTree<Integer> t) {
       char[] path = s.toCharArray();
       BTNode<Integer> current = t.getRoot();
@@ -69,7 +81,7 @@ public class ED213 {
    }
 
  public static void main(String[] args) { 
-    Scanner scan = new Scanner("3 1 N 2 N N 5 N 8 6 N 7 N N 10 N N");
+    Scanner scan = new Scanner("14 4 3 N N 9 7 5 N N N N 18 16 15 N N 17 N N 20 N N");
 
     BTree<Integer> tree = BTree.readIntTree(scan);
 

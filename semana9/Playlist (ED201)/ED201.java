@@ -1,5 +1,3 @@
-package semana9.ED201;
-
 import java.util.Scanner;
 
 public class ED201 {
