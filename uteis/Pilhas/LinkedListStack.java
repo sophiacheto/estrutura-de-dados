@@ -5,7 +5,7 @@ import uteis.LinkedLists.DoublyLinkedList;
 public class LinkedListStack<T> implements MyStack<T> {
    private DoublyLinkedList<T> list;
 
-   LinkedListStack() { list = new DoublyLinkedList<T>();}
+   public LinkedListStack() { list = new DoublyLinkedList<T>();}
    
    public void push(T v) { list.addFirst(v); }   
    public T pop() {
