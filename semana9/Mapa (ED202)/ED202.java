@@ -1,6 +1,8 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+
+// ATENÇÃO: AINDA NÃO FUNCIONA; NÃO ESTÁ FINALIZADO
 public class ED202 {
     static boolean primeiraVez = true;
     static double melhor;
