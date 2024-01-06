@@ -1,5 +1,3 @@
-package semana7.ED194;
-
 public class LinkedListStack<T> implements MyStack {
     private DoublyLinkedList<T> list;
 
