@@ -3,8 +3,8 @@ package semana10;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import uteis.Arvores.BTNode;
-import uteis.Arvores.BTree;
+import uteis.ArvoresBinarias.BTNode;
+import uteis.ArvoresBinarias.BTree;
 
 public class ED213 {
     public static String maxSum(BTree<Integer> tree) {
